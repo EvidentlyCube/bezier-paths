@@ -4,7 +4,7 @@
   "description": "A library to easily generate and traverse bezier paths. And different parts of the path can have different speeds!",
   "main": "dist/index.js",
   "scripts": {
-    "build": "parcel build index.js --global BezierPaths"
+    "build": "parcel build index.js --global BezierPaths -d dist && parcel build index.js --global BezierPaths -d docs -o bezier-paths.js"
   },
   "keywords": [
     "bezier",

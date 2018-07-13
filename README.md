@@ -4,7 +4,7 @@ A library to easily generate and traverse bezier paths. And different parts of t
 
 # Interactive demo
 
-\<insert the link to interactive demo here after the code is pushed for the first time>
+[Check it out here](https://evidentlycube.github.io/bezier-paths/)!
 
 # Installation
 
