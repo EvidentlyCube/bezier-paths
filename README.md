@@ -1,6 +1,6 @@
 # Bezier Paths
 
-A library for easily generating and traversing bezier paths. And different parts of the path can have different speeds!
+A library to easily generate and traverse bezier paths. And different parts of the path can have different speeds!
 
 # Interactive demo
 

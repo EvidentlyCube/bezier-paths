@@ -1,7 +1,7 @@
 {
   "name": "bezier-paths",
   "version": "1.0.0",
-  "description": "Library to work with and traversing bezier paths",
+  "description": "A library to easily generate and traverse bezier paths. And different parts of the path can have different speeds!",
   "main": "dist/index.js",
   "scripts": {
     "build": "parcel build index.js --global BezierPaths"
