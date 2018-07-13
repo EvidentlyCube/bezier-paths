@@ -1,6 +1,6 @@
 {
   "name": "bezier-paths",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library to easily generate and traverse bezier paths. And different parts of the path can have different speeds!",
   "main": "dist/index.js",
   "scripts": {
