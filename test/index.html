@@ -1,0 +1,97 @@
+<html>
+<head>
+	<style>
+		p {
+			width: 800px;
+		}
+		* {
+			font-family: Verdana, arial, sans-serif;
+		}
+		code{
+			background: #e3e3e3;
+			padding: 3px 8px;
+			border-radius: 5px;
+			font-family: "Courier New", monospace;
+		}
+		pre{
+			padding: 10px;
+			width: 800px;
+			background: #e3e3e3;
+		}
+
+		pre code{
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+<canvas id="canvas" width="800" height="400"></canvas>
+<h3>Options & stats</h3>
+<ul>
+	<li>Drag the points and controls around using mouse</li>
+	<li>
+		<label for="precision">Bezier curve precision</label>
+		<input type="number" min="1" max="100" step="1" id="precision" value="10" size="1" style="width:3em">
+	</li>
+	<li>
+		<label for="curved">Enable bezier curves</label>
+		<input type="checkbox" id="curved" checked>
+	</li>
+	<li>
+		<label><strong>Speed</strong> from start / to mid / from mid / to end</label>
+		<input type="number" min="1" max="99" step="1" value="1" size="1" style="width:3em" id="speed-0">
+		<code>&longrightarrow;</code>
+		<input type="number" min="1" max="99" step="1" value="10" size="1" style="width:3em" id="speed-1">
+		<code> &bigcirc;</code>
+		<input type="number" min="1" max="99" step="1" value="10" size="1" style="width:3em" id="speed-2">
+		<code>&longrightarrow;</code>
+		<input type="number" min="1" max="99" step="1" value="1" size="1" style="width:3em" id="speed-3">
+	</li>
+	<li>
+		<label for="playback-speed">Playback speed</label>
+		<input type="number" min="1" max="100" step="1" id="playback-speed" value="1" size="1" style="width:3em">
+	</li>
+	<li>
+		<strong>Path length:</strong> <span id="path-length">unknown</span>px.
+	</li>
+	<li>
+		<strong>Path duration:</strong> <span id="path-duration">unknown</span> frames
+	</li>
+	<li>
+		<strong>Distance since last frame:</strong> <span id="delta-distance">unknown</span>px
+	</li>
+	<li>
+		<strong>Playback time:</strong> <span id="playback-time">unknown</span> frames
+	</li>
+</ul>
+<h3>Information</h3>
+<p>
+<em>BezierPaths</em> is a library for generating bezier-curve paths and calculating movement over them. Path can be
+	traversed either by specifying distance travelled along the path or by time; paths support changing speeds,
+	acceleration and deceleration which makes travelling by time more versatile.
+</p>
+
+<p>
+	<strong>Installation: </strong> <code>npm i bezier-paths</code>
+</p>
+<h3>Usage</h3>
+<pre><code>var curvedPoints = [];
+
+curvedPoints.push(BezierPaths.createBezierPoint(
+	x, y,
+	speedTo, speedFrom,
+	controlBackX, controlBackY,
+	controlFrontX, controlFrontY
+));
+curvedPoints.push(BezierPaths.createBezierPoint(...));
+curvedPoints.push(BezierPaths.createBezierPoint(...));
+curvedPoints.push(BezierPaths.createBezierPoint(...));
+
+var path = BezierPaths.compilePath(precision, points);
+path.getPointAtTime(time);
+// OR
+path.getPointAtDistance(distance);</code></pre>
+<script src="../dist/index.js"></script>
+<script src="test.js"></script>
+</body>
+</html>

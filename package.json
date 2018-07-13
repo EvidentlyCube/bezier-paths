@@ -1,0 +1,21 @@
+{
+  "name": "bezier-paths",
+  "version": "1.0.0",
+  "description": "Library to work with and traversing bezier paths",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "parcel build index.js --global BezierPaths"
+  },
+  "keywords": [
+    "bezier",
+    "library",
+    "js",
+    "path",
+    "traverse"
+  ],
+  "author": "Maurycy Zarzycki Evidently Cube",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^1.9.4"
+  }
+}
