@@ -16,6 +16,6 @@
   "author": "Maurycy Zarzycki Evidently Cube",
   "license": "MIT",
   "devDependencies": {
-    "parcel": "^1.9.4"
+    "parcel": "^1.12.3"
   }
 }
